@@ -34,3 +34,20 @@ sysinfo.txt
 # Builds
 *.apk
 *.unitypackage
+MadMinds unity/Assets/ART/gfx.meta
+MadMinds unity/Assets/ART/gfx/cave.png
+MadMinds unity/Assets/ART/gfx/cave.png.meta
+MadMinds unity/Assets/ART/gfx/character.png
+MadMinds unity/Assets/ART/gfx/character.png.meta
+MadMinds unity/Assets/ART/gfx/font.png
+MadMinds unity/Assets/ART/gfx/font.png.meta
+MadMinds unity/Assets/ART/gfx/Inner.png
+MadMinds unity/Assets/ART/gfx/Inner.png.meta
+MadMinds unity/Assets/ART/gfx/log.png
+MadMinds unity/Assets/ART/gfx/log.png.meta
+MadMinds unity/Assets/ART/gfx/NPC_test.png
+MadMinds unity/Assets/ART/gfx/NPC_test.png.meta
+MadMinds unity/Assets/ART/gfx/objects.png
+MadMinds unity/Assets/ART/gfx/objects.png.meta
+MadMinds unity/Assets/ART/gfx/Overworld.png
+MadMinds unity/Assets/ART/gfx/Overworld.png.meta
