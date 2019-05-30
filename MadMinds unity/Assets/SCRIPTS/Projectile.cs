@@ -7,6 +7,21 @@ public class Projectile : MonoBehaviour
     public LayerMask collisionMask; //only collides with projectile mask- for void checkcollisions
     float speed = 10;
     float damage = 1;
+    float lifetime = 0.5f; //bullet lifetime 3s
+    float skinWidth = 0.1f; //between raycast and projectile
+
+    void Start()
+    {
+        Destroy(gameObject, lifetime);
+
+        //check see if raycast is inside the colliders
+        Collider[] initialCollision = Physics.OverlapSphere(transform.position, 1f, collisionMask);
+        if(initialCollision.Length >0)
+        {
+            OnHitObject(initialCollision[0]); //the first collission that it hits
+        }
+    }
+
     public void SetSpeed(float newSpeed)
     {
         speed = newSpeed; //different weapons =different speeds
@@ -33,7 +48,7 @@ public class Projectile : MonoBehaviour
         RaycastHit hit;
 
         //                                                           -collides with trigger colliders
-        if(Physics.Raycast(ray, out hit, moveDistance, collisionMask, QueryTriggerInteraction.Collide))
+        if(Physics.Raycast(ray, out hit, moveDistance+skinWidth, collisionMask, QueryTriggerInteraction.Collide))
         {
             OnHitObject(hit);//checks if the raycast hits
         }
@@ -41,7 +56,7 @@ public class Projectile : MonoBehaviour
 
     void OnHitObject(RaycastHit hit)
     {
-        IDamagable damagableObject = hit.collider.GetComponent<IDamagable>();
+        IDamageable damagableObject = hit.collider.GetComponent<IDamageable>();
         if(damagableObject != null)
         {
             damagableObject.TakeHit(damage, hit);
@@ -50,5 +65,15 @@ public class Projectile : MonoBehaviour
         //print(hit.collider.gameObject.name);
         GameObject.Destroy(gameObject);
 
+    }
+
+    void OnHitObject(Collider c)
+    {
+        IDamageable damageableObject = c.GetComponent<IDamageable>();
+        if (damageableObject != null)
+        {
+            damageableObject.TakeDamage(damage);
+        }
+        GameObject.Destroy(gameObject);
     }
 }

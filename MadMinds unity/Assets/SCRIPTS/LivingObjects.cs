@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class LivingObjects : MonoBehaviour, IDamagable
+public class LivingObjects : MonoBehaviour, IDamageable
 {
     public float startingHealth;
     public float health;
@@ -19,8 +19,14 @@ public class LivingObjects : MonoBehaviour, IDamagable
 
     public void TakeHit (float damage, RaycastHit hit)
     {
+        //edit later
+        TakeDamage(damage);
+    }
+
+    public void TakeDamage(float damage)
+    {
         health -= damage;
-        if(health <=0 && !dead)
+        if (health <= 0 && !dead)
         {
             Die();
         }

@@ -2,8 +2,11 @@
 //using System.Collections.Generic;
 using UnityEngine;
 
-public interface IDamagable
+public interface IDamageable
 {
+
     void TakeHit(float damage, RaycastHit hit);
+
+    void TakeDamage(float damage); // not taking raycast hit variable
 
 }
