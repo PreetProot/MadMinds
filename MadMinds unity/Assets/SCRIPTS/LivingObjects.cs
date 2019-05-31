@@ -25,6 +25,7 @@ public class LivingObjects : MonoBehaviour, IDamageable
 
     public void TakeDamage(float damage)
     {
+        Score.scoreValue += 10;
         health -= damage;
         if (health <= 0 && !dead)
         {
