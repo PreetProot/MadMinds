@@ -52,8 +52,9 @@ public class Player : LivingObjects
         }
 
         //WEAPON INPUT - PREET
-        if(Input.GetMouseButton(0))
+        if(Input.GetMouseButton(0) || Input.GetKeyDown(KeyCode.Space))
         {
+            Debug.Log("Space key was pressed.");
             gunController.Shoot();
         }
     }
