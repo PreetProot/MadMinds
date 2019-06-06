@@ -2,16 +2,18 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PickUpItem : MonoBehaviour
+public class TestLoot : MonoBehaviour
 {
 
     public void OnTriggerEnter(Collider collider)
     {
-        if(collider.gameObject.tag == "Player")
+        if (collider.gameObject.tag == "Player")
         {
             print("item picked up");
             Destroy(gameObject);
-            //Loots.calcLoot();
         }
     }
+
+ 
 }
+

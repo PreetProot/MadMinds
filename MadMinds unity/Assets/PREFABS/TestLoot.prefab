@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &8943731918539997499
+--- !u!1 &483341688725850938
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,47 +8,48 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 8943731918539997447}
-  - component: {fileID: 8943731918539997446}
-  - component: {fileID: 8943731918539997445}
-  - component: {fileID: 8943731918539997444}
-  - component: {fileID: 5025888418858363049}
+  - component: {fileID: 483341688725850913}
+  - component: {fileID: 483341688725850942}
+  - component: {fileID: 483341688725850943}
+  - component: {fileID: 483341688725850940}
+  - component: {fileID: 483341688725850941}
+  - component: {fileID: 6624966838008151471}
   m_Layer: 0
-  m_Name: YellowLoot
+  m_Name: TestLoot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &8943731918539997447
+--- !u!4 &483341688725850913
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8943731918539997499}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.8648944, y: 0.67891026, z: 2.3982847}
+  m_GameObject: {fileID: 483341688725850938}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -4.29, y: 0.66, z: 1.31}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &8943731918539997446
+--- !u!33 &483341688725850942
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8943731918539997499}
-  m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
---- !u!23 &8943731918539997445
+  m_GameObject: {fileID: 483341688725850938}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!23 &483341688725850943
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8943731918539997499}
+  m_GameObject: {fileID: 483341688725850938}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -59,7 +60,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 542c9cddaee7ff64b95288b01e17c331, type: 2}
+  - {fileID: 2100000, guid: 47955872626dac442acc69357ec55e9c, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -79,30 +80,48 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!135 &8943731918539997444
-SphereCollider:
+--- !u!65 &483341688725850940
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8943731918539997499}
+  m_GameObject: {fileID: 483341688725850938}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &5025888418858363049
+--- !u!114 &483341688725850941
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8943731918539997499}
+  m_GameObject: {fileID: 483341688725850938}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7b9c3f7207cf1934ebf8ac571e2af5c4, type: 3}
+  m_Script: {fileID: 11500000, guid: 11ebff19f5ebf5f468b6a62d2cee70d8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Lootable: []
-  dropChance: 0
+--- !u!114 &6624966838008151471
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 483341688725850938}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eeebe4f715ae19d4fa0c90acac955651, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Lootable:
+  - name: p
+    item: {fileID: 1421725045647108062, guid: 5698c8a4d218ab645b87ff3ad41d619b, type: 3}
+    dropRarity: 80
+  - name: y
+    item: {fileID: 8943731918539997499, guid: 7d4ab6ad77b2b924fb2df0d5fdb319bb, type: 3}
+    dropRarity: 50
+  dropChance: 100

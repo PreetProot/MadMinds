@@ -43,7 +43,7 @@ public class WeaponSwitch : MonoBehaviour
             selectedWeapon= 0; //weapon1
         }
 
-        if (Input.GetKeyDown(KeyCode.Alpha2) && transform.childCount >2)
+        if (Input.GetKeyDown(KeyCode.Alpha2) && transform.childCount >0)
         {
             selectedWeapon = 1; //weapon2
         }

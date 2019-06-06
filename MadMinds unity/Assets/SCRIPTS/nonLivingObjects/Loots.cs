@@ -50,6 +50,11 @@ public class Loots : MonoBehaviour
             }
         }
     }
+
+    void Update()
+    {
+        calcLoot();
+    }
 }
 
    /* // Start is called before the first frame update

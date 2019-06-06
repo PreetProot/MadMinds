@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Timer : MonoBehaviour
+/*public class Timer : MonoBehaviour
 {
     Image timeBar;
     public float maxTime = 5f;
@@ -32,4 +32,4 @@ public class Timer : MonoBehaviour
             Time.timeScale = 0;
         }
     }
-}
+}*/

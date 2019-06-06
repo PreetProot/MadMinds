@@ -7,6 +7,7 @@ public class LivingObjects : MonoBehaviour, IDamageable
     public float startingHealth;
     public float health;
     public bool dead;
+    public GameObject lootDrop;
 
     public event System.Action OnDeath;
 
@@ -27,7 +28,7 @@ public class LivingObjects : MonoBehaviour, IDamageable
     {
         Score.scoreValue += 10;
         health -= damage;
-        if (health <= 0 && !dead)
+        if (health <= 0 && !dead)//whenb enemy take damage.die
         {
             Die();
         }
@@ -39,6 +40,8 @@ public class LivingObjects : MonoBehaviour, IDamageable
         if (OnDeath != null)
         {
             OnDeath(); //when die, what event comes next
+            Instantiate(lootDrop, transform.position, Quaternion.identity);
+
         }
         GameObject.Destroy(gameObject);
     }

@@ -131,3 +131,5 @@ MonoBehaviour:
   startingHealth: 5
   health: 0
   dead: 0
+  lootDrop: {fileID: 2902734628132717114, guid: aabd0bf2e77af8f4d8f304243567f9bd,
+    type: 3}
