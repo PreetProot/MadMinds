@@ -2630,6 +2630,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c9437144e1cc2bd4186a593817e97463, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< HEAD
+=======
+  startingHealth: 100
+  health: 0
+  dead: 0
+  lootDrop: {fileID: 0}
+>>>>>>> 0c4d2ade98387d2e7d9ec1b9806c9671364c1c49
   moveSpeed: 5
   healthIndicator: {fileID: 823962676}
 --- !u!136 &1625031264
