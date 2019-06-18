@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class InputManager : MonoBehaviour
 {
+
+    //FOR KEYBINDING INPUT
     // Start is called before the first frame update
     void Start()
     {

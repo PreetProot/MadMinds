@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class GunController : MonoBehaviour
 {
+    public AmmoManager ammoManager;
+    public int ammoCount;
 
     public Transform weaponHold;
     public Gun startingGun; //allaw starting weapon
@@ -13,6 +15,8 @@ public class GunController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        ammoManager = AmmoManager.instance;
+
         if(startingGun != null)
         {
             EquipGun(startingGun); //if no gun, eqip a gun
@@ -46,8 +50,13 @@ public class GunController : MonoBehaviour
         //check if weapon is equipped
         if(equippedGun != null)
         {
-            equippedGun.Shoot();
+
+           // if (ammoManager.UseAmmo())
+            //{
+                equippedGun.Shoot();
+            //}
         }
+
     }
 
 }

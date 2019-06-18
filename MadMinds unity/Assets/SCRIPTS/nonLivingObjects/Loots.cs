@@ -16,7 +16,13 @@ public class Loots : MonoBehaviour
     public List<DropCurrency> Lootable = new List<DropCurrency>();
     public int dropChance;
 
-    public void calcLoot()
+    private void OnEnable()
+    {
+        CalcLoot();
+    }
+
+
+    public void CalcLoot()
     {
         //dropchnce
         int calcDropChance = Random.Range(0, 101);
@@ -53,7 +59,7 @@ public class Loots : MonoBehaviour
 
     void Update()
     {
-        calcLoot();
+        //calcLoot();
     }
 }
 

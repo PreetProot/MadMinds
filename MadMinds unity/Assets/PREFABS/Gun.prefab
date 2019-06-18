@@ -80,6 +80,7 @@ MonoBehaviour:
     type: 3}
   msBetweenShots: 1000
   muzzleVelocity: 10
+  ammoTypes: 0
 --- !u!1 &1158789660845701812
 GameObject:
   m_ObjectHideFlags: 0

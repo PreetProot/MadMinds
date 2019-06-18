@@ -61,7 +61,6 @@ public class Projectile : MonoBehaviour
         {
             damagableObject.TakeHit(damage, hit);
         }
-
         //print(hit.collider.gameObject.name);
         GameObject.Destroy(gameObject);
 
@@ -75,5 +74,11 @@ public class Projectile : MonoBehaviour
             damageableObject.TakeDamage(damage);
         }
         GameObject.Destroy(gameObject);
+    }
+
+    void OnCollisionEnter(Collision collision)
+    {
+        Debug.Log("hit wall");
+        Destroy(GameObject.FindWithTag("Projectile"));
     }
 }

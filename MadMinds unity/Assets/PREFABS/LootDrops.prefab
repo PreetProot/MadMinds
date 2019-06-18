@@ -47,13 +47,13 @@ MonoBehaviour:
   Lootable:
   - name: Pink Loot
     item: {fileID: 1421725045647108062, guid: 5698c8a4d218ab645b87ff3ad41d619b, type: 3}
-    dropRarity: 80
+    dropRarity: 90
   - name: Yellow Loot
     item: {fileID: 8943731918539997499, guid: 7d4ab6ad77b2b924fb2df0d5fdb319bb, type: 3}
-    dropRarity: 50
+    dropRarity: 80
   - name: Blue Loot
     item: {fileID: 7432535873626896512, guid: 1a748f5a05410b94ebb4b9b098f78573, type: 3}
-    dropRarity: 20
+    dropRarity: 70
   dropChance: 100
 --- !u!1 &5718513885240338878
 GameObject:

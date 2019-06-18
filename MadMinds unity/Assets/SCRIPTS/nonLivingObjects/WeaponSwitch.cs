@@ -5,6 +5,7 @@ using UnityEngine;
 public class WeaponSwitch : MonoBehaviour
 {
 
+
     //name of weapon
     public int selectedWeapon = 0;
 
@@ -72,5 +73,5 @@ public class WeaponSwitch : MonoBehaviour
             }
         }
     }
-
+    
 }

@@ -46,7 +46,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1158789660566865244
 Transform:
   m_ObjectHideFlags: 0
@@ -80,6 +80,7 @@ MonoBehaviour:
     type: 3}
   msBetweenShots: 3
   muzzleVelocity: 1
+  ammoTypes: 2
 --- !u!1 &1158789660845701812
 GameObject:
   m_ObjectHideFlags: 0
