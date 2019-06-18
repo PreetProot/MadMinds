@@ -1,17 +1,18 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 [RequireComponent(typeof(PlayerController))]
 [RequireComponent(typeof(GunController))]
 //when add player script to obj, it forces the script to run with this script
-
 
 public class Player : LivingObjects
 {
     //PREET - player movement input
 
     public float moveSpeed = 5;
+
     PlayerController controller; //ref the script
     Camera viewCamera; //cam ref
 
@@ -25,12 +26,18 @@ public class Player : LivingObjects
         controller = GetComponent<PlayerController>();
         gunController = GetComponent<GunController>();
         viewCamera = Camera.main;
-
-    }
+    } 
+        
 
     // Update is called once per frame
     void Update()
     {
+        Movement();
+    }
+
+    void Movement()
+    {
+    ///<Preet>
         //MOVEMENT -PREET
         //                                    GetAxisRaw = removes movement default smoothing
         Vector3 moveInput = new Vector3(Input.GetAxisRaw("Horizontal"), 0, Input.GetAxisRaw("Vertical"));
@@ -42,7 +49,7 @@ public class Player : LivingObjects
         Plane groundPlane = new Plane(Vector3.up, Vector3.zero); //get raycast to ground
         float rayDistance;
 
-        if (groundPlane.Raycast (ray, out rayDistance)) //assign raydistance - return tru if ray intersects with ground 
+        if (groundPlane.Raycast(ray, out rayDistance)) //assign raydistance - return tru if ray intersects with ground 
         {
             Vector3 point = ray.GetPoint(rayDistance); //point of intersection -knows the distance of the ray from ground
 
@@ -52,10 +59,11 @@ public class Player : LivingObjects
         }
 
         //WEAPON INPUT - PREET
-        if(Input.GetMouseButton(0) || Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetMouseButton(0) || Input.GetKeyDown(KeyCode.Space))
         {
             Debug.Log("Space key was pressed.");
             gunController.Shoot();
         }
+    ///</Preet >
     }
 }

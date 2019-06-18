@@ -1,13 +1,17 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class LivingObjects : MonoBehaviour, IDamageable
 {
     public float startingHealth;
     public float health;
     public bool dead;
+
     public GameObject lootDrop;
+
+    public Image healthIndicator;
 
     public event System.Action OnDeath;
 
@@ -28,6 +32,10 @@ public class LivingObjects : MonoBehaviour, IDamageable
     {
         Score.scoreValue += 10;
         health -= damage;
+        /// <Aieman>
+        healthIndicator.GetComponent<Image>().color = new Vector4(1.0f, 1.0f, 1.0f, 1 - (health / startingHealth));
+        /// </Aieman>
+
         if (health <= 0 && !dead)//whenb enemy take damage.die
         {
             Die();
